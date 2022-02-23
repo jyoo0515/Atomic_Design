@@ -6,7 +6,7 @@ interface Props {
   readOnly?: boolean;
 }
 
-function Input({ placeholder, readOnly }: Props) {
+function Input({ placeholder, readOnly = false }: Props) {
   return <StyledInput placeholder={placeholder} readOnly={readOnly} />;
 }
 
