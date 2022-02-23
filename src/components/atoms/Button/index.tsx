@@ -7,10 +7,6 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-interface StyleProps {
-  type: 'button' | 'reset' | 'submit';
-}
-
 function Button({ type = 'button', disabled = false, ...props }: ButtonProps) {
   return (
     <StyledButton type={type} onClick={props.onClick} disabled={disabled} />
@@ -19,7 +15,7 @@ function Button({ type = 'button', disabled = false, ...props }: ButtonProps) {
 
 export default Button;
 
-const StyledButton = styled.button<StyleProps>`
+const StyledButton = styled.button`
   background-color: ${(props) =>
     props.type == 'button'
       ? props.theme.colors.gray_1
