@@ -12,6 +12,4 @@ function Input({ placeholder, readOnly = false }: Props) {
 
 export default Input;
 
-const StyledInput = styled.input`
-  margin-left: 20px;
-`;
+const StyledInput = styled.input``;
